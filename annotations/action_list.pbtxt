@@ -1,0 +1,20 @@
+item {
+  name: "walk"
+  id: 1
+}
+item {
+  name: "talk"
+  id: 2
+}
+item {
+  name: "hand rise"
+  id: 3
+}
+item {
+  name: "turn body"
+  id: 4
+}
+item {
+  name: "bend head"
+  id: 5
+}
