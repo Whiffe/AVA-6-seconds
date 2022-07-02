@@ -22,25 +22,9 @@ json_path = arg.json_path
 f = open(avaMin_dense_proposals_path,'rb')
 info = pickle.load(f, encoding='iso-8859-1') 
 
-attributes_dict = {'1':dict(aname='眼睛状态', type=2, options={'0':'不可见', '1':'其他', '2':'睁眼', '3':'闭眼'},default_option_id="", anchor_id = 'FILE1_Z0_XY1'),
+attributes_dict = {'1':dict(aname='1 class actions', type=2, options={'0':'walk', '1':'talk', '2':'hand rise'},default_option_id="", anchor_id = 'FILE1_Z0_XY1'),
 
-                   '2': dict(aname='口唇状态', type=2, options={'4':'不可见', '5':'其他', '6':'张口', '7':'闭口'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '3':dict(aname='整体状态', type=2, options={'8':'不可见', '9':'其他', '10':'正坐', '11':'侧坐', '12':'站立', '13':'趴卧', '14':'俯身', '15':'下蹲', '16':'依靠', '17':'平躺', '18':'侧躺'},default_option_id="", anchor_id = 'FILE1_Z0_XY1'),
-                   
-                   '4': dict(aname='左手掌状态', type=2, options={'19':'不可见', '20':'其他', '21':'手掌抓握', '22':'手掌展开', '23':'手掌指点', '24':'鼓掌', '25':'书写'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '5': dict(aname='左手臂状态', type=2, options={'26':'不可见', '27':'其他', '28':'手臂放平', '29':'手臂下垂', '30':'手臂前伸', '31':'手臂弯曲', '32':'手臂举起'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '6': dict(aname='左手行为对象', type=2, options={'33':'不可见', '34':'其他', '35':'书本', '36':'练习本', '37':'饶头', '38':'电子设备', '39':'指他人', '40':'粉笔', '41':'无交互'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '7': dict(aname='右手掌状态', type=2, options={'42':'不可见', '43':'其他', '44':'手掌抓握', '45':'手掌展开', '46':'手掌指点', '47':'鼓掌', '48':'书写'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '8': dict(aname='右手臂状态', type=2, options={'49':'不可见', '50':'其他', '51':'手臂放平', '52':'手臂下垂', '53':'手臂前伸', '54':'手臂弯曲', '55':'手臂举起'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '9': dict(aname='右手行为对象', type=2, options={'56':'不可见', '57':'其他', '58':'书本', '59':'练习本', '60':'饶头', '61':'电子设备', '62':'指他人', '63':'粉笔', '64':'无交互'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
-                   
-                   '10': dict(aname='腿部姿态', type=2, options={'65':'不可见', '66':'其他', '67':'站', '68':'跑', '69':'走', '70':'跳', '71':'踢'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
+                   '2': dict(aname='2 class actions', type=2, options={'3':'turn body', '4':'bend head'}, default_option_id="", anchor_id='FILE1_Z0_XY1'),
                   }
 
 #len_x与循环的作用主要是获取每个视频下视频帧的数量
