@@ -6,6 +6,7 @@ mkdir choose_frames
 mkdir annotations
 mkdir choose_frames_middle
 mkdir rawframes
+mkdir choose_all_middlemost
 
 touch ./annotations/train_excluded_timestamps.csv
 touch ./annotations/val_excluded_timestamps.csv
