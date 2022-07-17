@@ -3,6 +3,7 @@ import os
 import json
 import pickle
 import argparse
+import numpy as np
 
 parser = argparse.ArgumentParser()
 
@@ -25,7 +26,6 @@ avaMin_dense_proposals_path = arg.proposals_dir
 showPkl = arg.show
 
 results_dict = {}
-dicts = []
 for root, dirs, files in os.walk(labelPath):
     lenFile = len(files)/3
     if root == labelPath:
@@ -61,11 +61,11 @@ for root, dirs, files in os.walk(labelPath):
                     y[2] = float(j[2]) - float(j[4]) / 2  # top left y
                     y[3] = float(j[1]) + float(j[3]) / 2  # bottom right x
                     y[4] = float(j[2]) + float(j[4]) / 2  # bottom right y
-                    
-                    results.append([y[1],y[2],y[3],y[4],y[5]])
+                    temp = [y[1],y[2],y[3],y[4],float(y[5])]
+                    #temp = temp.astype(np.float64)
+                    results.append(temp)
                     temp_txt.close()  # 关闭文件
-                    dicts.append([y[1],y[2],y[3],y[4],y[5]])
-            results_dict[key] = results
+            results_dict[key] = np.array(results)
 
 # 保存为pkl文件
 with open(avaMin_dense_proposals_path,"wb") as pklfile: 
