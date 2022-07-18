@@ -1,0 +1,5 @@
+1: walk
+2: talk
+3: hand rise
+4: turn body
+5: bend head
